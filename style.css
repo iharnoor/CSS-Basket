@@ -9,6 +9,17 @@ main {
     position: relative;
 }
 
+
+#basket {
+    display: block;
+    position: absolute;
+    min-width: 428px;
+    height: 493px;
+
+    left: 495px;
+    top: -100px;
+}
+
 header h1 {
     font-family: Montserrat, "sans-serif";
     font-size: 45px;
