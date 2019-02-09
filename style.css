@@ -58,38 +58,9 @@ main {
     margin: 0 auto;
 }
 
-.park {
-    background-color: #dcd6d6;
-    padding: 20px;
-    position: relative;
-    border-top: 2px solid #fff;
-    -moz-box-shadow: 0px -20px 0px #c4baba;
-    -webkit-box-shadow: 0px -20px 0px #c4baba;
-    box-shadow: 0px -20px 0px #c4baba;
-    margin-top: 50px;
-}
-
-.park:before, .park:after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    border-left: 2px dashed #fff;
-    width: 2px;
-    top: 0px;
-}
-
-.park:before {
-    left: 315px;
-}
-
-.park:after {
-    left: 650px;
-}
-
 .car {
-    width: 285px;
+    width: 125px;
     height: 125px;
-    background: #b6bec3;
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -110,35 +81,15 @@ main {
     border-top-left-radius: 20px 30px;
 }
 
-.car.car-silver {
-    background-color: silver;
-}
-
-
-@-moz-keyframes animacao-passo1 {
-    from {
-        left: 0;
-    }
-    to {
-        left: 680px;
-    }
-}
-
-@-webkit-keyframes animacao-passo1 {
-    from {
-        left: 0;
-    }
-    to {
-        left: 680px;
-    }
-}
 
 @keyframes animacao-passo1 {
     from {
-        left: 0;
+        left: 0px;
+        top: 0;
     }
     to {
-        left: 680px;
+        left: 350px;
+        top: 340px;
     }
 }
 
@@ -149,19 +100,22 @@ main {
 }
 
 .passo1:checked + .passo2 ~ .car {
-    left: 680px;
+    left: 350px;
+    top: 340px;
 }
 
 @keyframes animacao-passo2 {
     from {
-        left: 680px;
+        left: 350px;
+        top: 340px;
     }
     to {
         -moz-transform-origin: top left;
         -ms-transform-origin: top left;
         -webkit-transform-origin: top left;
         transform-origin: top left;
-        left: 0px;
+        left: 750px;
+        top: 0px;
     }
 }
 
@@ -177,21 +131,18 @@ main {
     -ms-transform-origin: top left;
     -webkit-transform-origin: top left;
     transform-origin: top left;
-    /*-moz-transform: rotate(0.1turn);*/
-    /*-ms-transform: rotate(0.1turn);*/
-    /*-webkit-transform: rotate(0.1turn);*/
-    /*transform: rotate(0.1turn);*/
-    left: 0px;
+    left: 750px;
+    top: 0px;
 }
 
 @keyframes animacao-passo3 {
     from {
-        left: 0px;
-        top: 0;
+        left: 750px;
+        top: 0px;
     }
     to {
-        left: 0px;
-        top: -180px;
+        left: 840px;
+        top: 340px;
     }
 }
 
@@ -199,8 +150,8 @@ main {
     -moz-animation: animacao-passo3 3s ease-out;
     -webkit-animation: animacao-passo3 3s ease-out;
     animation: animacao-passo3 3s ease-out;
-    left: 0px;
-    top: -180px;
+    left: 840px;
+    top: 340px;
 }
 
 @keyframes animacao-passo4 {
@@ -210,7 +161,7 @@ main {
     }
     to {
         left: 0px;
-        top: 150px;
+        top: 340px;
     }
 }
 
