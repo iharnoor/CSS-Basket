@@ -128,6 +128,8 @@ main {
         left: 750px;
         top: 0px;
     }
+
+
 }
 
 .passo1:checked + .passo2:checked + .passo3:not(:checked) ~ .car {
