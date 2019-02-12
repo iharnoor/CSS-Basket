@@ -69,7 +69,7 @@ main {
     margin: 0 auto;
 }
 
-.car {
+.basket {
     width: 125px;
     height: 125px;
     position: relative;
@@ -104,13 +104,13 @@ main {
     }
 }
 
-.step1:checked + .step2:not(:checked) ~ .car {
+.step1:checked + .step2:not(:checked) ~ .basket {
     -moz-animation: animacao-step1 3s ease-in-out;
     -webkit-animation: animacao-step1 3s ease-in-out;
     animation: animacao-step1 3s ease-in-out;
 }
 
-.step1:checked + .step2 ~ .car {
+.step1:checked + .step2 ~ .basket {
     left: 350px;
     top: 340px;
 }
@@ -130,14 +130,14 @@ main {
     }
 }
 
-.step1:checked + .step2:checked + .step3:not(:checked) ~ .car {
+.step1:checked + .step2:checked + .step3:not(:checked) ~ .basket {
     -moz-animation: animacao-step2 3s;
     -webkit-animation: animacao-step2 3s;
     animation: animacao-step2 3s;
 }
 
 
-.step1:checked + .step2:checked + .step3 ~ .car {
+.step1:checked + .step2:checked + .step3 ~ .basket {
     -moz-transform-origin: top left;
     -ms-transform-origin: top left;
     -webkit-transform-origin: top left;
@@ -157,7 +157,7 @@ main {
     }
 }
 
-.step1:checked + .step2:checked + .step3:checked ~ .car {
+.step1:checked + .step2:checked + .step3:checked ~ .basket {
     -moz-animation: animacao-step3 3s ease-out;
     -webkit-animation: animacao-step3 3s ease-out;
     animation: animacao-step3 3s ease-out;
@@ -176,7 +176,7 @@ main {
     }
 }
 
-.step2:checked + .step3:checked + .step4:checked ~ .car {
+.step2:checked + .step3:checked + .step4:checked ~ .basket {
     -moz-animation: animacao-step4 3s;
     -webkit-animation: animacao-step4 3s;
     animation: animacao-step4 3s;
