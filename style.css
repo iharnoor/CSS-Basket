@@ -93,7 +93,7 @@ main {
 }
 
 
-@keyframes animacao-passo1 {
+@keyframes animacao-step1 {
     from {
         left: 0px;
         top: 0;
@@ -104,18 +104,18 @@ main {
     }
 }
 
-.passo1:checked + .passo2:not(:checked) ~ .car {
-    -moz-animation: animacao-passo1 3s ease-in-out;
-    -webkit-animation: animacao-passo1 3s ease-in-out;
-    animation: animacao-passo1 3s ease-in-out;
+.step1:checked + .step2:not(:checked) ~ .car {
+    -moz-animation: animacao-step1 3s ease-in-out;
+    -webkit-animation: animacao-step1 3s ease-in-out;
+    animation: animacao-step1 3s ease-in-out;
 }
 
-.passo1:checked + .passo2 ~ .car {
+.step1:checked + .step2 ~ .car {
     left: 350px;
     top: 340px;
 }
 
-@keyframes animacao-passo2 {
+@keyframes animacao-step2 {
     from {
         left: 350px;
         top: 340px;
@@ -128,18 +128,16 @@ main {
         left: 750px;
         top: 0px;
     }
-
-
 }
 
-.passo1:checked + .passo2:checked + .passo3:not(:checked) ~ .car {
-    -moz-animation: animacao-passo2 3s;
-    -webkit-animation: animacao-passo2 3s;
-    animation: animacao-passo2 3s;
+.step1:checked + .step2:checked + .step3:not(:checked) ~ .car {
+    -moz-animation: animacao-step2 3s;
+    -webkit-animation: animacao-step2 3s;
+    animation: animacao-step2 3s;
 }
 
 
-.passo1:checked + .passo2:checked + .passo3 ~ .car {
+.step1:checked + .step2:checked + .step3 ~ .car {
     -moz-transform-origin: top left;
     -ms-transform-origin: top left;
     -webkit-transform-origin: top left;
@@ -148,46 +146,42 @@ main {
     top: 0px;
 }
 
-@keyframes animacao-passo3 {
+@keyframes animacao-step3 {
     from {
         left: 750px;
         top: 0px;
     }
     to {
-        left: 840px;
+        left: 780px;
         top: 340px;
     }
 }
 
-.passo1:checked + .passo2:checked + .passo3:checked ~ .car {
-    -moz-animation: animacao-passo3 3s ease-out;
-    -webkit-animation: animacao-passo3 3s ease-out;
-    animation: animacao-passo3 3s ease-out;
-    left: 840px;
+.step1:checked + .step2:checked + .step3:checked ~ .car {
+    -moz-animation: animacao-step3 3s ease-out;
+    -webkit-animation: animacao-step3 3s ease-out;
+    animation: animacao-step3 3s ease-out;
+    left: 780px;
     top: 340px;
 }
 
-@keyframes animacao-passo4 {
+@keyframes animacao-step4 {
     from {
-        left: 0px;
-        top: -180px;
+        left: 780px;
+        top: 340px;
     }
     to {
-        left: 0px;
-        top: 340px;
+        left: 780px;
+        top: 200px;
     }
 }
 
-.passo2:checked + .passo3:checked + .passo4:checked ~ .car {
-    -moz-animation: animacao-passo4 3s;
-    -webkit-animation: animacao-passo4 3s;
-    animation: animacao-passo4 3s;
-    left: 345px;
-    top: -183px;
-    /*-moz-transform: rotate(0deg);*/
-    /*-ms-transform: rotate(0deg);*/
-    /*-webkit-transform: rotate(0deg);*/
-    /*transform: rotate(0deg);*/
+.step2:checked + .step3:checked + .step4:checked ~ .car {
+    -moz-animation: animacao-step4 3s;
+    -webkit-animation: animacao-step4 3s;
+    animation: animacao-step4 3s;
+    left: 780px;
+    top: 200px;
 }
 
 
@@ -320,115 +314,55 @@ main {
     text-decoration: none;
 }
 
-@-moz-keyframes animacao-check-step {
-    0%, 80% {
-        pointer-events: none;
-        opacity: 0.2;
-    }
-    100% {
-        pointer-events: all;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes animacao-check-step {
-    0%, 80% {
-        pointer-events: none;
-        opacity: 0.2;
-    }
-    100% {
-        pointer-events: all;
-        opacity: 1;
-    }
-}
-
-@keyframes animacao-check-step {
-    0%, 80% {
-        pointer-events: none;
-        opacity: 0.2;
-    }
-    100% {
-        pointer-events: all;
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes show-congrats {
-    0%, 50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-
-@-webkit-keyframes show-congrats {
-    0%, 50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-
-@keyframes show-congrats {
-    0%, 50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-
-input.passo1:checked ~ .breadcrumbs > .passo2-label, input.passo1:checked + input.passo2:checked ~ .breadcrumbs > .passo3-label, input.passo1:checked + input.passo2:checked + input.passo3:checked ~ .breadcrumbs > .passo4-label {
+input.step1:checked ~ .breadcrumbs > .step2-label, input.step1:checked + input.step2:checked ~ .breadcrumbs > .step3-label, input.step1:checked + input.step2:checked + input.step3:checked ~ .breadcrumbs > .step4-label {
     pointer-events: all;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
 }
 
-input.passo1:checked, input.passo1:checked ~ .breadcrumbs > .passo1-label,
-input.passo1:checked ~ .breadcrumbs > .passo1-label:after, input.passo1:checked + input.passo2:checked ~ .breadcrumbs > .passo2-label,
-input.passo1:checked + input.passo2:checked ~ .breadcrumbs > .passo2-label:after, input.passo1:checked + input.passo2:checked + input.passo3:checked ~ .breadcrumbs > .passo3-label,
-input.passo1:checked + input.passo2:checked + input.passo3:checked ~ .breadcrumbs > .passo3-label:after, input.passo1:checked + input.passo2:checked + input.passo3:checked + input.passo4:checked ~ .breadcrumbs > .passo4-label,
-input.passo1:checked + input.passo2:checked + input.passo3:checked + input.passo4:checked ~ .breadcrumbs > .passo4-label:after {
+input.step1:checked, input.step1:checked ~ .breadcrumbs > .step1-label,
+input.step1:checked ~ .breadcrumbs > .step1-label:after, input.step1:checked + input.step2:checked ~ .breadcrumbs > .step2-label,
+input.step1:checked + input.step2:checked ~ .breadcrumbs > .step2-label:after, input.step1:checked + input.step2:checked + input.step3:checked ~ .breadcrumbs > .step3-label,
+input.step1:checked + input.step2:checked + input.step3:checked ~ .breadcrumbs > .step3-label:after, input.step1:checked + input.step2:checked + input.step3:checked + input.step4:checked ~ .breadcrumbs > .step4-label,
+input.step1:checked + input.step2:checked + input.step3:checked + input.step4:checked ~ .breadcrumbs > .step4-label:after {
     background-color: #495d65;
     color: #fff;
 }
 
-.passo2-label,
-.passo3-label,
-.passo4-label {
+.step2-label,
+.step3-label,
+.step4-label {
     pointer-events: none;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
     opacity: 0.2;
 }
 
-input.passo1:checked ~ .breadcrumbs > .passo2-label {
+input.step1:checked ~ .breadcrumbs > .step2-label {
     -moz-animation: animacao-check-step 3.2s;
     -webkit-animation: animacao-check-step 3.2s;
     animation: animacao-check-step 3.2s;
 }
 
-input.passo1:checked + input.passo2:checked ~ .breadcrumbs > .passo3-label {
+input.step1:checked + input.step2:checked ~ .breadcrumbs > .step3-label {
     -moz-animation: animacao-check-step 3.2s;
     -webkit-animation: animacao-check-step 3.2s;
     animation: animacao-check-step 3.2s;
 }
 
-input.passo1:checked + input.passo2:checked + input.passo3:checked ~ .breadcrumbs > .passo4-label {
+input.step1:checked + input.step2:checked + input.step3:checked ~ .breadcrumbs > .step4-label {
     -moz-animation: animacao-check-step 3.2s;
     -webkit-animation: animacao-check-step 3.2s;
     animation: animacao-check-step 3.2s;
 }
 
-input.passo1:checked + input.passo2:checked + input.passo3:checked + input.passo4:checked ~ .breadcrumbs > .passo4-label,
-input.passo1:checked + input.passo2:checked + input.passo3:checked + input.passo4:checked ~ .breadcrumbs > .passo4-label:after {
+input.step1:checked + input.step2:checked + input.step3:checked + input.step4:checked ~ .breadcrumbs > .step4-label,
+input.step1:checked + input.step2:checked + input.step3:checked + input.step4:checked ~ .breadcrumbs > .step4-label:after {
     -moz-animation: animacao-check-step 3.2s;
     -webkit-animation: animacao-check-step 3.2s;
     animation: animacao-check-step 3.2s;
 }
 
-input.passo1:checked + input.passo2:checked + input.passo3:checked + input.passo4:checked ~ .congrats {
+input.step1:checked + input.step2:checked + input.step3:checked + input.step4:checked ~ .congrats {
     -moz-animation: show-congrats 4.4s;
     -webkit-animation: show-congrats 4.4s;
     animation: show-congrats 4.4s;
